@@ -1,0 +1,2 @@
+# Reto técnico Avatar Global
+
