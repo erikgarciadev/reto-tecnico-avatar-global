@@ -6,11 +6,12 @@ export const TYPES = Object.freeze({
 
 export const TITLES = Object.freeze({
   LIST_MOVIES: "Lista de Películas",
-  LIST_CHARACTERS:'Lista de Personajes'
+  LIST_CHARACTERS: "Lista de Personajes",
+  DETAIL_CHARACTER: "Información del Personaje",
 });
 
 export const PATHS = Object.freeze({
   MOVIES: "/",
   CHARACTERS: "/characters",
-  CHARACTER:'/character'
+  CHARACTER: "/character",
 });

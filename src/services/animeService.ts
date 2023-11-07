@@ -1,3 +1,4 @@
+import { CharacterResponse } from "../interfaces/character";
 import { CharactersResponse } from "../interfaces/characters";
 import { MoviesResponse } from "../interfaces/movie";
 import { BASE_URL_API } from "../utils/constants";
@@ -31,7 +32,7 @@ class AnimeService {
     character_mal_id,
   }: {
     character_mal_id: number;
-  }) {
+  }): Promise<CharacterResponse> {
     const response = await fetch(
       `${BASE_URL_API}/characters/${character_mal_id}/full`
     );

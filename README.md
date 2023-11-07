@@ -18,12 +18,13 @@
   - [x] Header
   - [X] MovieCard
   - [X] CharacterCard
+  - [X] FullCharacterCard
   - [X] BadgeRole
-  - [ ] ButtonBack
-- [ ] Diseñar las vistas
+  - [X] ButtonBack
+- [X] Diseñar las vistas
   - [X] Vista Peliculas
   - [X] Vista Personajes
-  - [ ] Vista Detaille Personaje
+  - [X] Vista Detaille Personaje
 
 ## Levantamiento del proyecto
 
