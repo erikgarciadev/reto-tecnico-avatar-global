@@ -1,7 +1,14 @@
+import { MoviesResponse } from "../interfaces/movie";
 import { BASE_URL_API } from "../utils/constants";
 
 class AnimeService {
-  static async getMovies({ search, type }: { search: string; type: string }) {
+  static async getMovies({
+    search,
+    type,
+  }: {
+    search: string;
+    type: string;
+  }): Promise<MoviesResponse> {
     const response = await fetch(
       `${BASE_URL_API}/anime?q=${search}&type=${type}`
     );

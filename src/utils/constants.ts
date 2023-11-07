@@ -7,3 +7,8 @@ export const TYPES = Object.freeze({
 export const TITLES = Object.freeze({
   LIST_MOVIES: "Lista de películas",
 });
+
+export const PATHS = Object.freeze({
+  MOVIES: "/",
+  CHARACTERS: "/characters",
+});

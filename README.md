@@ -16,11 +16,11 @@
 
 - [ ] Realizar componentes
   - [x] Header
-  - [ ] MovieCard
+  - [X] MovieCard
   - [ ] CharacterCard
   - [ ] ButtonBack
 - [ ] Diseñar las vistas
-  - [ ] Vista Peliculas
+  - [X] Vista Peliculas
   - [ ] Vista Personajes
   - [ ] Vista Detaille Personaje
 
