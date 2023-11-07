@@ -1,6 +1,8 @@
 import { Movie } from "../../interfaces/movie";
+import { PATHS } from "../../utils/constants";
 import StarIcon from "../Icons/Star";
 import ButtonTrailer from "./ButtonTrailer";
+import { Link } from "react-router-dom";
 
 interface Props {
   movie: Movie;
@@ -38,9 +40,11 @@ export default function MovieCard({ movie }: Props) {
 
         <div>
           {movie.trailer.url ? <ButtonTrailer url={movie.trailer.url} /> : null}
-          <button className="w-full font-semibold bg-[#074b86] p-2">
-            Ver Personajes
-          </button>
+          <Link to={`${PATHS.CHARACTERS}/${movie.mal_id}`}>
+            <button className="w-full font-semibold bg-[#074b86] p-2">
+              Ver Personajes
+            </button>
+          </Link>
         </div>
       </div>
     </div>

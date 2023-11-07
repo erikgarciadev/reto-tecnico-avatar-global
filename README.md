@@ -17,11 +17,12 @@
 - [ ] Realizar componentes
   - [x] Header
   - [X] MovieCard
-  - [ ] CharacterCard
+  - [X] CharacterCard
+  - [X] BadgeRole
   - [ ] ButtonBack
 - [ ] Diseñar las vistas
   - [X] Vista Peliculas
-  - [ ] Vista Personajes
+  - [X] Vista Personajes
   - [ ] Vista Detaille Personaje
 
 ## Levantamiento del proyecto
