@@ -5,10 +5,12 @@ export const TYPES = Object.freeze({
 });
 
 export const TITLES = Object.freeze({
-  LIST_MOVIES: "Lista de películas",
+  LIST_MOVIES: "Lista de Películas",
+  LIST_CHARACTERS:'Lista de Personajes'
 });
 
 export const PATHS = Object.freeze({
   MOVIES: "/",
   CHARACTERS: "/characters",
+  CHARACTER:'/character'
 });

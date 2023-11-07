@@ -1,3 +1,4 @@
+import { CharactersResponse } from "../interfaces/characters";
 import { MoviesResponse } from "../interfaces/movie";
 import { BASE_URL_API } from "../utils/constants";
 
@@ -16,7 +17,11 @@ class AnimeService {
     return data;
   }
 
-  static async getCharacters({ mal_id }: { mal_id: number }) {
+  static async getCharacters({
+    mal_id,
+  }: {
+    mal_id: number;
+  }): Promise<CharactersResponse> {
     const response = await fetch(`${BASE_URL_API}/anime/${mal_id}/characters`);
     const data = await response.json();
     return data;
