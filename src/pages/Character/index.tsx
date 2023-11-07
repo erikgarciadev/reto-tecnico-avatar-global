@@ -5,10 +5,10 @@ import { TITLES } from "../../utils/constants";
 import useCharacter from "./useCharacter";
 
 export default function Character() {
-  const { characterData } = useCharacter();
+  const { characterData, pageState } = useCharacter();
 
   return (
-    <Layout title={TITLES.DETAIL_CHARACTER}>
+    <Layout title={TITLES.DETAIL_CHARACTER} pageState={pageState}>
       <div className="wrapper px-3 py-8">
         <div className="mb-2">
           <ButtonBack />

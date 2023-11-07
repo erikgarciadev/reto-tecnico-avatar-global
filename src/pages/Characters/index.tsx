@@ -5,10 +5,10 @@ import ButtonBack from "../../components/ButtonBack";
 import useCharacters from "./useCharacters";
 
 export default function Characters() {
-  const { charactersData } = useCharacters();
+  const { charactersData, pageState } = useCharacters();
 
   return (
-    <Layout title={TITLES.LIST_CHARACTERS}>
+    <Layout title={TITLES.LIST_CHARACTERS} pageState={pageState}>
       <div className="wrapper px-3 py-8">
         <div className="mb-2">
           <ButtonBack />

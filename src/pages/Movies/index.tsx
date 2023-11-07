@@ -4,10 +4,10 @@ import MovieCard from "../../components/MovieCard";
 import useMovies from "./useMovies";
 
 export default function Movies() {
-  const { movies } = useMovies();
+  const { movies, pageState } = useMovies();
 
   return (
-    <Layout title={TITLES.LIST_MOVIES}>
+    <Layout title={TITLES.LIST_MOVIES} pageState={pageState}>
       <div className="wrapper px-3 py-8">
         <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {movies.map((movie) => (

@@ -14,13 +14,15 @@
 
 ## Tareas realizadas
 
-- [ ] Realizar componentes
+- [X] Realizar componentes
   - [x] Header
   - [X] MovieCard
   - [X] CharacterCard
   - [X] FullCharacterCard
   - [X] BadgeRole
   - [X] ButtonBack
+  - [X] Loader
+  - [X] Error
 - [X] Diseñar las vistas
   - [X] Vista Peliculas
   - [X] Vista Personajes

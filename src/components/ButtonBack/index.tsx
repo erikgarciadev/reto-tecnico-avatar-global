@@ -1,14 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import LeftArrowIcon from "../Icons/LeftArrow";
 
-interface Props {
-  onClick?: () => void;
-}
-
-export default function ButtonBack({ onClick }: Props) {
+export default function ButtonBack() {
+  const navigate = useNavigate();
+  const handleBack = () => navigate(-1);
   return (
     <button
       className="p-2 flex items-center gap-2 bg-[#074b86] text-white font-semibold rounded-md"
-      onClick={onClick}
+      onClick={handleBack}
     >
       <LeftArrowIcon />
       Volver
