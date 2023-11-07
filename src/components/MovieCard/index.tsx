@@ -17,6 +17,9 @@ export default function MovieCard({ movie }: Props) {
             className="w-full object-cover h-64"
             alt="Image Movie"
             src={movie.images.webp.large_image_url}
+            loading="lazy"
+            height={"256px"}
+            width={"215px"}
           />
         </picture>
         <h2 className="font-semibold">{movie.title}</h2>

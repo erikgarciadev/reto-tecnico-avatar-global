@@ -17,6 +17,9 @@ export default function CharacterCard({ role, character }: Props) {
             className="w-full object-cover h-64"
             alt="Image Character"
             src={character.images.webp.image_url}
+            loading="lazy"
+            height={"256px"}
+            width={"215px"}
           />
         </picture>
         <h2 className="font-semibold text-xl">{character.name}</h2>
