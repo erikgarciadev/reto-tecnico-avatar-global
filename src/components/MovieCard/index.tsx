@@ -7,7 +7,6 @@ interface Props {
 }
 
 export default function MovieCard({ movie }: Props) {
-  console.log(movie);
   return (
     <div className="bg-white group relative  rounded-lg shadow-lg">
       <div className="flex flex-col p-2 justify-between gap-3">
