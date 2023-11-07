@@ -1,5 +1,38 @@
 # Reto técnico Avatar Global
 
+Proyecto realizado principalmente con las tecnologias React , Vite y Typescript.
+
+## Estructura
+
+```
+root
+|
+│   README.md    
+│   App.tsx  
+│   index.css   
+│   main.tsx    
+│   .gitignore
+
+└───src
+│   │
+│   └───components (En esta carpeta se encuentra los componentes que pueden ser utilizados en el proyecto)
+│   │    
+│   └───interfaces  (Interfaces para el tipado de los datos)
+│   │    
+│   └───layouts (Layouts para el proyecto, para este proyecto solo se tiene uno que contiene el Header, y tambien se valida si esta cargando o hay un error)
+│   │    
+│   └───pages  (Paginas que contiene el proyecto, este proyecto solo contiente 3 : Lista de Peliculas, Lista de Personajes y Detalle del Personaje)
+│   │    
+│   └───routes  (Carpetas con las routes, que podria ser publicas o privadas)
+│   │    
+│   └───services  (Servicios utilizados para consumir API, en este caso solo se tiene un servicio)
+│   │    
+│   └───utils  (En este carpeta puede ir funciones, constantes, data que pueden ser necesarios en toda el proyecto)
+
+```
+
+
+
 ## Librerias usadas
 
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
