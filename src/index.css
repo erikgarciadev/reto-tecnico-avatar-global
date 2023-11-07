@@ -14,3 +14,7 @@
   margin: 0;
   padding: 0;
 }
+
+.wrapper {
+  @apply max-w-7xl mx-auto;
+}
