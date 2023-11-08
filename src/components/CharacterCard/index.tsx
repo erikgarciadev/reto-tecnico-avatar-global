@@ -2,6 +2,7 @@ import { Character, Role } from "../../interfaces/characters";
 import { PATHS } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import BadgeRole from "../BadgeRole";
+import Image from "../Image";
 
 interface Props {
   character: Character;
@@ -13,14 +14,7 @@ export default function CharacterCard({ role, character }: Props) {
     <div className="bg-white flex flex-col justify-between gap-2 p-2 rounded-md shadow-lg">
       <div>
         <picture>
-          <img
-            className="w-full object-cover h-64"
-            alt="Image Character"
-            src={character.images.webp.image_url}
-            loading="lazy"
-            height={"256px"}
-            width={"215px"}
-          />
+          <Image height={256} src={character.images.webp.image_url} />
         </picture>
         <h2 className="font-semibold text-xl">{character.name}</h2>
         <BadgeRole role={role} />

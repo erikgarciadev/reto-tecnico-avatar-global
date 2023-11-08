@@ -1,6 +1,7 @@
 import { Movie } from "../../interfaces/movie";
 import { PATHS } from "../../utils/constants";
 import StarIcon from "../Icons/Star";
+import Image from "../Image";
 import ButtonTrailer from "./ButtonTrailer";
 import { Link } from "react-router-dom";
 
@@ -13,14 +14,7 @@ export default function MovieCard({ movie }: Props) {
     <div className="bg-white group relative  rounded-lg shadow-lg">
       <div className="flex flex-col p-2 justify-between gap-3">
         <picture>
-          <img
-            className="w-full object-cover h-64"
-            alt="Image Movie"
-            src={movie.images.webp.large_image_url}
-            loading="lazy"
-            height={"256px"}
-            width={"215px"}
-          />
+          <Image src={movie.images.webp.large_image_url} height={256} />
         </picture>
         <h2 className="font-semibold">{movie.title}</h2>
       </div>
@@ -34,7 +28,7 @@ export default function MovieCard({ movie }: Props) {
           {movie.synopsis ? (
             <div>
               <label className="text-xs font-semibold">Sinopsis</label>
-              <p className="text-sm text-ellipsis line-clamp-4 overflow-hidden">
+              <p className="text-sm text-ellipsis line-clamp-3 overflow-hidden">
                 {movie.synopsis}
               </p>
             </div>

@@ -13,7 +13,7 @@ export default function Characters() {
         <div className="mb-2">
           <ButtonBack />
         </div>
-        <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+        <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
           {charactersData.map((characterData) => (
             <CharacterCard
               key={characterData.character.mal_id}
