@@ -1,4 +1,5 @@
 import { FullCharacter } from "../../interfaces/character";
+import Image from "../Image";
 interface Props {
   fullCharacterData: FullCharacter;
 }
@@ -8,7 +9,7 @@ export default function FullCharacterCard({ fullCharacterData }: Props) {
     <div className="bg-white min-h-[400px] gap-2 sm:gap-6 p-4 flex flex-col sm:flex-row">
       <div className="md:w-[40%] ">
         <picture>
-          <img
+          <Image
             className="w-full sm:min-w-[300px] object-contain h-60 sm:object-cover sm:h-96"
             alt="Image Character"
             src={fullCharacterData.images.webp.image_url}

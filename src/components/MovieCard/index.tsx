@@ -14,7 +14,14 @@ export default function MovieCard({ movie }: Props) {
     <div className="bg-white group relative  rounded-lg shadow-lg">
       <div className="flex flex-col p-2 justify-between gap-3">
         <picture>
-          <Image src={movie.images.webp.large_image_url} height={256} />
+          <Image
+            className="w-full object-cover h-64"
+            src={movie.images.webp.large_image_url}
+            alt="Image Movie"
+            loading="lazy"
+            height={"256px"}
+            width={"215px"}
+          />
         </picture>
         <h2 className="font-semibold">{movie.title}</h2>
       </div>

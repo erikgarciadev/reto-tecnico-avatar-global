@@ -3,17 +3,23 @@ import { URL_IMAGE_NOT_FOUND } from "../../utils/constants";
 import PhotoIcon from "../Icons/Photo";
 import { classNames } from "../../utils/util";
 
-interface Props {
-  height: number;
-  src: string;
+interface Props
+  extends Omit<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    "onLoad" | "onError"
+  > {
+  srcError?: string;
 }
 
-export default function Image({ height, src }: Props) {
-  const [imageSrc, setImageSrc] = React.useState(src);
+export default function Image({
+  srcError = URL_IMAGE_NOT_FOUND,
+  ...props
+}: Props) {
+  const [imageSrc, setImageSrc] = React.useState(props.src);
   const [loading, setLoading] = React.useState(true);
 
   const handleError = () => {
-    setImageSrc(URL_IMAGE_NOT_FOUND);
+    setImageSrc(srcError);
   };
 
   const handleLoad = () => {
@@ -25,9 +31,9 @@ export default function Image({ height, src }: Props) {
       {loading ? (
         <>
           <div
-            style={{ height: `${height}px` }}
             className={classNames(
-              "items-center justify-center w-full animate-pulse bg-gray-300",
+              "items-center justify-center  w-full animate-pulse bg-gray-300",
+              props.className ?? "h-full",
               loading ? "flex" : "hidden"
             )}
           >
@@ -37,15 +43,14 @@ export default function Image({ height, src }: Props) {
         </>
       ) : null}
       <img
-        style={{ height: loading ? "0px" : `${height}px` }}
-        className="w-full object-cover"
-        alt="Image Character"
-        src={`${imageSrc}`}
-        loading="lazy"
-        height={`${height}px`}
-        width={"215px"}
+        {...props}
+        className={classNames(
+          `w-full object-cover`,
+          loading ? `h-0 ` : props.className ?? "h-full"
+        )}
         onError={handleError}
         onLoad={handleLoad}
+        src={`${imageSrc}`}
       />
     </>
   );

@@ -12,12 +12,21 @@ interface Props {
 export default function CharacterCard({ role, character }: Props) {
   return (
     <div className="bg-white flex flex-col justify-between gap-2 p-2 rounded-md shadow-lg">
-      <div>
+      <div className="flex flex-col gap-1">
         <picture>
-          <Image height={256} src={character.images.webp.image_url} />
+          <Image
+            className="w-full object-cover h-64"
+            src={character.images.webp.image_url}
+            alt="Image Character"
+            loading="lazy"
+            height={"256px"}
+            width={"215px"}
+          />
         </picture>
         <h2 className="font-semibold text-xl">{character.name}</h2>
-        <BadgeRole role={role} />
+        <div>
+          <BadgeRole role={role} />
+        </div>
       </div>
       <div>
         <Link to={`${PATHS.CHARACTER}/${character.mal_id}`}>
